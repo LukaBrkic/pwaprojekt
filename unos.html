@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PWA</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script type="text/javascript">
+        function validacijaForme() {
+            var posaljiFormu = true;
+
+            var titleLen = document.getElementById("title").value.length;
+            if (titleLen < 5 || titleLen > 30) {
+                posaljiFormu = false;
+                document.getElementById("title").style.borderColor = "red";
+                document.getElementById("titlePoruka").innerHTML = "Naslov vjesti mora imati između 5 i 30 znakova! <br> ";
+            } else {
+                document.getElementById("title").style.bordercolor = "black";
+                document.getElementById("titlePoruka").innerHTML = "";
+            }
+            var aboutLen = document.getElementById("about").value.length;
+            if (aboutLen < 10 || aboutLen > 100) {
+                posaljiFormu = false;
+                document.getElementById("about").style.borderColor = "red";
+                document.getElementById("aboutPoruka").innerHTML = "Kratki sadržaj mora imati između 10 i 100 znakova! <br> ";
+            } else {
+                document.getElementById("about").style.bordercolor = "black";
+                document.getElementById("aboutPoruka").innerHTML = "";
+            }
+            var contentLen = document.getElementById("articleText").value.length;
+            if (contentLen == 0) {
+                posaljiFormu = false;
+                document.getElementById("articleText").style.borderColor = "red";
+                document.getElementById("articleTextPoruka").innerHTML = "Sadržaj mora biti unesen! <br> ";
+            } else {
+                document.getElementById("articleText").style.bordercolor = "black";
+                document.getElementById("articleTextPoruka").innerHTML = "";
+            }
+            var slikaLen = document.getElementById("slikica").value.length;
+            if (slikaLen == 0) {
+                posaljiFormu = false;
+                document.getElementById("slikica").style.borderColor = "red";
+                document.getElementById("slikicaPoruka").innerHTML = "Slika mora biti unesena! <br> ";
+            } else {
+                document.getElementById("slikica").style.borderColor = "black";
+                document.getElementById("slikicaPoruka").innerHTML = "";
+            }
+            var category = document.getElementById("category");
+            if (document.getElementById("category").selectedIndex == 0) {
+                posaljiFormu = false;
+                category.style.borderColor = "red";
+                document.getElementById("categoryPoruka").innerHTML = "Kategorija mora biti odabrana! <br> ";
+            } else {
+                category.style.borderColor = "black";
+                document.getElementById("categoryPoruka").innerHTML = "";
+            }
+            return posaljiFormu;
+
+        };
+    </script>
+</head>
+
+<body style="background-color:#f2f2f2">
+    <div class="topnav" id="myTopnav">
+        <h1 id="mainNaslov">
+            BBC
+        </h1>
+        <a href="index.php">Home</a>
+        <a href="php/kategorija.php?category=kultura">Kultura</a>
+        <a href="php/kategorija.php?category=sport">Sport</a>
+        <a href="php/administracija.php">Administracija</a>
+        <a href="">Unos</a>
+        <a href="registracija.php">Registracija</a>
+
+    </div>
+    <form enctype="multipart/form-data" onsubmit="return validacijaForme()" method="post" action="php/unos.php">
+        <div class="container">
+            <div class="row">
+                <div class="col-25">
+                    <label for="title">Naslov vijesti</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="title" name="title">
+                    <span class="red" id="titlePoruka"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="about">Kratki sadržaj vijesti:</label><br>
+                </div>
+                <div class="col-75">
+                    <textarea id="about" name="about" cols="5" rows="10"></textarea>
+                    <span class="red" id="aboutPoruka"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="articleText">Puni tekst vijesti:</label><br>
+                </div>
+                <div class="col-75">
+                    <textarea id="articleText" name="articleText" cols="5" rows="10"></textarea>
+                    <span class="red" id="articleTextPoruka"></span>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="category">Kategorija vijesti</label>
+                </div>
+                <div class="col-75">
+                    <select id="category" name="category">
+                        <option value="">Odabir kategorije</option>
+                        <option value="sport">Sport</option>
+                        <option value="kultura">Kultura</option>
+                    </select>
+                    <span class="red" id="categoryPoruka"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="slikica">Slika:</label>
+                </div>
+                <div class="col-75">
+                    <input type="file" id="slikica" name="slikica" class="borderZaSliku"
+                        accept="image/jpg,image/gif, image/png, image/jpeg" class="input-text" />
+                    <span class="red" id="slikicaPoruka"></span>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="archive">Spremiti tekst u arhivu:</label>
+                </div>
+                <div class="col-75">
+                    <input type="checkbox" id="archive" name="archive">
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <input type="submit" value="Submit">
+            </div>
+        </div>
+    </form>
+    <footer>
+        <p class=" copyright-text">Copyright &copy; 2017 All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

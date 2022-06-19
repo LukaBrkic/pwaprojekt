@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: inherit;
+}
+
+
+img {
+    display: inline-block;
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+.naslov {
+
+    padding-left: 2%;
+    padding-top: 2%;
+    text-transform: uppercase;
+}
+
+#mainNaslovFull {
+    float: left;
+    color: white;
+    padding-top: 1%;
+    padding-left: 9%;
+}
+
+#mainNaslov {
+
+    float: left;
+    color: white;
+    padding: 12px;
+
+    padding-left: 2%;
+    text-align: center;
+}
+
+
+
+.welcomeMessage {
+    float: left;
+    padding-left: 2%;
+
+}
+
+.artikl {
+    padding-left: 2%;
+    float: left;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    font-weight: 400;
+    max-width: 33%;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+
+.articleImage {
+    height: 200px;
+    margin-top: 5%;
+}
+
+
+
+footer {
+    display: inline-block;
+    margin-top: 1000px;
+    margin-bottom: 0%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    min-width: 100%;
+    font-size: 15px;
+    background-color: rgb(75, 69, 69);
+    color: #737373;
+}
+
+.copyright-text {
+    padding-left: 10%;
+    padding-top: 1%;
+}
+
+.artiklFull {
+    float: left;
+    text-align: left;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    font-weight: 400;
+    opacity: 1;
+    transition: 0.3s;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.naslovFull {
+    float: left;
+    padding-left: 20%;
+    text-transform: uppercase;
+    background-color: orange;
+    width: 100%;
+    font-size: 30px;
+}
+
+
+.artikl:hover {
+    opacity: 0.8;
+}
+
+.naslov {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+.welcome {
+    padding-top: 2%;
+}
+
+.sekcija {
+    text-align: left;
+    padding-left: 2%;
+    width: 80%;
+    margin-left: 10%;
+    clear: both;
+    display: inline-block;
+}
+
+.fullSekcija {
+    text-align: left;
+    width: 100%;
+    display: inline-block;
+    padding-bottom: 10%;
+}
+
+
+.padded {
+    padding-bottom: 10%;
+}
+
+#centeredBig {
+    text-align: center;
+    width: 100%;
+}
+
+
+
+
+.topnav {
+    overflow: hidden;
+    padding-left: 12%;
+    text-transform: uppercase;
+    background-color: black;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    opacity: 0.8;
+}
+
+.topnav a.active {
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+#date {
+    float: right;
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+    .artikl {
+        padding-top: 5%;
+        padding-bottom: 5%;
+        padding-right: 10%;
+        max-width: 100%;
+        text-align: left;
+        font-size: 1.6rem;
+        line-height: 1.7;
+        font-weight: 400;
+        opacity: 1;
+        transition: 0.3s;
+    }
+
+    #date {
+        float: right;
+    }
+
+    .articleImage {
+        height: clear;
+        display: block;
+    }
+
+
+
+    #mainNaslov {
+        width: 100%;
+        text-align: center;
+    }
+
+    header {
+        display: inline-block;
+
+    }
+
+    .topnav {
+        padding-left: 0%;
+        display: clear;
+        position: relative;
+        min-width: 100%;
+        width: 100%;
+        background-color: #022f69;
+    }
+
+    .topnav a {
+        float: none;
+        display: block;
+        text-align: center;
+        min-width: 100%;
+    }
+
+}
+
+.centered {
+    margin: auto;
+}
+
+form {
+    font-size: medium;
+    position: relative;
+    text-align: center;
+}
+
+.forma {
+    width: 100%;
+}
+
+textarea {
+    width: 30%;
+}
+
+.content {
+    float: left;
+    text-align: left;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    font-weight: 400;
+    opacity: 1;
+    transition: 0.3s;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.red {
+    color: red;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.maxWidth {
+    width: 100%;
+}
+
+.borderZaSliku,
+text {
+    border: 1px solid #ccc;
+
+}
+
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+.submitButton {
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+#administracijaForm {
+    background-color: #f2f2f2;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+
+    .col-25,
+    .col-75,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+
+.formatiranje {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
