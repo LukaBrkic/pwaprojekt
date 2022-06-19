@@ -1,3 +1,3 @@
 # pwaprojekt
 Clone files into htdocs folder of XAMPP installation.
-Import database using pwaprojekt.sql, rename database to pwaprojekt.
+Create database named pwaprojekt and import data using pwaprojekt.sql
